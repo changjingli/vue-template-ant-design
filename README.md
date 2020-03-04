@@ -1,4 +1,4 @@
-# fly-elephant
+# vue-template-ant-design
 
 ## Project setup
 ```
@@ -22,3 +22,8 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Project Dependencies
+
+### Swagger
+See [swagger-ui](http://10.0.0.118:8080/swagger-ui.html)
