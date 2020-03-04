@@ -5,6 +5,7 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
+        "build:uat": "vue-cli-service build --mode uat",
         "lint": "vue-cli-service lint"
     },
     "dependencies": {
@@ -31,7 +32,8 @@
         "vue-cli-plugin-ant-design": "~1.0.0",
         "vue-template-compiler": "^2.6.11",
         "webpack": "^4.0.0",
-        "webpack-bundle-analyzer": "^3.6.0"
+        "webpack-bundle-analyzer": "^3.6.0",
+        "zip-webpack-plugin": "^3.0.0"
     },
     "eslintConfig": {
         "root": true,
