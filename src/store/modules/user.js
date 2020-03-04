@@ -1,8 +1,8 @@
-import {login, getInfo} from '@/apis/system';
+import {getInfo, login} from '@/apis/system';
 import {resetRouter} from '@/router';
 
 const state = {
-  token: '',
+  token: '' || sessionStorage.getItem('token'),
   name: '',
   roles: [],
 };
@@ -26,6 +26,8 @@ const actions = {
     return new Promise((resolve, reject) => {
       login({username: username.trim(), password}).then(({data}) => {
         commit('SET_TOKEN', data.token);
+        sessionStorage.setItem('token', data.token);
+
         resolve();
       }).catch(error => {
         reject(error);

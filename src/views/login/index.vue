@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <img alt="LOGO" class="login-logo" src="../../assets/logo.png">
+    <img alt="LOGO" class="login-logo" src="@/assets/logo.png">
 
     <h1 class="login-title">{{ appName }}</h1>
     <!-- /.login-title -->
@@ -33,7 +33,7 @@
         @click="onClickLogin"
         block
         class="login-button"
-        nativeType="submit"
+        type="submit"
         size="large">
         登录系统
       </a-button>
@@ -56,6 +56,9 @@
       };
     },
     methods: {
+      /**
+       * 登录系统点击事件
+       */
       onClickLogin() {
         this.form.validateFieldsAndScroll((err, values) => {
           if (!err) {
@@ -69,7 +72,6 @@
             });
           }
         });
-
       },
     },
   };
@@ -92,6 +94,7 @@
   .login-logo {
     display: block;
     margin: 0 auto;
+    align-self: flex-end;
   }
 
   .login-title {
